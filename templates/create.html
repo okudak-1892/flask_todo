@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="m-5">新規追加</h2>
+<form class="m-5" action="/" method='POST'>
+    <div class="form-group pb-3">
+        <label for="title">Todo : </label>
+        <input type="text" class="form-control" name="title" aria-describedby="title-help">
+    </div>
+    <div class="form-group pb-3">
+        <label for="detail">詳細 : </label>
+        <input type="text" class="form-control" name="detail">
+    </div>
+    <div class="form-group pb-3">
+        <label for="due">期限 : </label>
+        <input type="date" name="due" required>
+    </div>
+    <a class="btn btn-outline-primary" href="/" role="button">戻る</a>
+    <button type="submit" class="btn btn-primary">追加</button>
+</form>
+{% endblock %}
